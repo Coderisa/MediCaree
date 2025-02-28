@@ -64,6 +64,15 @@
 
       <li><a href="{% url 'about-us'%}" style="text-decoration: none;">About Us</a></li>
 
+      <li class="nav-item">
+    <a class="nav-link" href="#" id="emergencyTrigger" 
+       style="display: inline-block; background-color: #e74c3c; color: #ffffff; padding: 10px 20px; border: none; border-radius: 5px; font-size: 1rem; font-weight: bold; text-decoration: none; cursor: pointer; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease, transform 0.2s ease; text-align: center;"
+       onmouseover="this.style.backgroundColor='#c0392b'; this.style.transform='translateY(-2px)'"
+       onmouseout="this.style.backgroundColor='#e74c3c'; this.style.transform='translateY(0)'">
+      <i class="fas fa-bell" style="margin-right: 10px; font-size: 1.2rem;"></i> Emergency Alert
+    </a>
+      </li>
+
       {% if user.is_authenticated and user.is_doctor or user.is_patient %}
       <li><a href="{% url 'multiple-hospital' %}" style="text-decoration: none;">Hospital</a></li>
       {% endif %}
